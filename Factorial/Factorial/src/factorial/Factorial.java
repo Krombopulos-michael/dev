@@ -10,26 +10,30 @@ import java.util.Scanner;
 
 public class Factorial {
 
+  
+
+   static long fact(int x){
+       if(x==1)return 1;
+       
+       return fact(x-1)*x;
+    }
    
     public static void main(String[] args) {
-       long n,i=0;
-        int a;
-        n = new Scanner(System.in).nextInt();
-        if (n!=1&&n>=0){
-      while(i<=n){
-          i++;
-          System.out.println("Working"+n);
-          
-      }
+       int i;
         
-        }
-        
-        if (n==1) {
-            System.out.println("Фактоиал числа "+n+"равен"+n);
-        }
-        else {
-            System.out.println("Эта программа не вычисляет фактоиал числа"+n);
-        }
+        int a = new Scanner(System.in).nextInt();
+     if (a!=0 && a>=1){
+       for ( i = 1 ;i<=a;i++){
+           
+      System.out.println( i+" = "+Factorial.fact(i));
+    
+       }
+       i = i-1;
+       System.out.println("Факториал числа  "+a+"   равен   "+Factorial.fact(i));
+     }
+     else{
+         System.out.println("Программа не вычисляет факториал числа"+a);
+     }
     }
     
 }
